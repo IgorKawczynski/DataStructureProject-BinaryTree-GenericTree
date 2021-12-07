@@ -231,16 +231,16 @@ def closest_parent(tree: BinaryTree, first_node: BinaryNode, second_node: Binary
     elif tree is first_node or tree is second_node:
         return tree
 
-    right_subtree = closest_parent(tree.right_child, first_node, second_node)
+    prawe_poddrzewo = closest_parent(tree.right_child, first_node, second_node)
 
-    left_subtree = closest_parent(tree.left_child, first_node, second_node)
+    lewe_poddrzewo = closest_parent(tree.left_child, first_node, second_node)
 
-    if right_subtree is not None and left_subtree is not None:
+    if prawe_poddrzewo is not None and lewe_poddrzewo is not None:
         return tree
-    elif left_subtree is not None:
-        return left_subtree
+    elif lewe_poddrzewo is not None:
+        return lewe_poddrzewo
     else:
-        return right_subtree
+        return prawe_poddrzewo
 
 
 tree2 = BinaryTree(1)
